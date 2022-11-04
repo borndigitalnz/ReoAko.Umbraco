@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>10.0.0</Version>
+    <Company>BornDigital</Company>
+    <Owner>BornDigital</Owner>
+    <Description>ReoAko API wrapper used by BornDigital.ReoAko.Umbraco</Description>
+    <PackageTags>ReoAko</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Born Digital Limited</Copyright>
+    <PackageProjectUrl>https://github.com/borndigitalnz/ReoAko.Umbraco</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/borndigitalnz/ReoAko.Umbraco</RepositoryUrl>
+    <Authors>BornDigital</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Options">
+      <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.10\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

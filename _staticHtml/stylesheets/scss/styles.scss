@@ -1,0 +1,150 @@
+// Fonts 
+$font-stack: sans-serif;
+$base-font-size: 16px;
+
+// Colors
+$color-base: #333333;
+$color-primary: #2bc37c;
+$color-primary-dark: #27af70;
+$color-border: #dddddd;
+$color-background: #f7f7f7;
+
+@function rem($pixels) {
+	@return $pixels / $base-font-size * 1rem;
+}
+
+// Base styles
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+input,
+select,
+textarea {
+	color: $color-base;
+	font-size: 100%;
+}
+
+body {
+	font-size: $base-font-size;
+	font-family: $font-stack;
+	line-height: 1.5;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+input,
+select,
+textarea {
+	font-size: rem(16px);
+	font-family: $font-stack;
+	padding: 10px;
+	line-height: auto;
+	background-color: #ffffff;
+	border: 1px solid $color-border;
+	width: 100%;
+	border-radius: 5px;
+	&:focus {
+		border-color: $color-primary;
+		outline: 1px solid $color-primary;
+	}
+}
+
+a {
+	color: $color-primary-dark;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		filter: brightness(80%);
+	}
+}
+
+table {
+	font-size: rem(14px);
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	th {
+		border: none;
+		padding: 20px;
+		text-align: left;
+		text-transform: uppercase;
+		font-size: rem(12px);
+	}
+	td {
+		border: none;
+		border-top: 1px solid $color-border;
+		border-bottom: 1px solid $color-border;
+		padding: 20px;
+		text-align: left;
+		&.term {
+			strong {
+				font-size: rem(16px);
+			}
+		}
+	}
+}
+
+h1 {
+	margin: 0 0 0.5em 0;
+}
+
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	font-family: $font-stack;
+	font-size: rem(14px);
+	font-weight: 400;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	background: $color-primary;
+	border: 1px solid $color-primary;
+	-webkit-appearance: none;
+	border-radius: 5px;
+	transition: all .25s ease-in-out;
+	position: relative;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: $color-primary-dark;
+		border-color: $color-primary-dark;
+	}
+
+	&:active {
+		filter: brightness(80%); 
+	}
+}
+
+
+.reoako-search {
+	padding: 20px;
+}
+
+.results-count {
+	font-size: rem(14px);
+	font-weight: 700;
+}
+
+.search-form {
+	display: flex;
+	gap: 10px;
+	&__input {
+		width: 100%;
+	}
+}
+.reoako-search-table {
+	margin-left: -20px;
+	margin-right: -20px;
+}

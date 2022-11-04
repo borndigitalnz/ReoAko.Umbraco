@@ -1,0 +1,20 @@
+@{
+    Layout = null;
+    var search = Context.Request.Query["search"].FirstOrDefault() ?? string.Empty;
+}
+
+<script src="/js/reoako.backoffice.js" defer="defer"></script>
+
+<div class="reoako-search">
+    <form id="reoako-search-form" class="search-form">
+        <div class="search-form__input">
+            <input type="text" name="search-term" value="@search" placeholder="Please enter your search term" />
+        </div>
+        <div class="search-form__submit">
+            <input type="submit" value="Search" class="button" />
+        </div>
+    </form>
+    <div id="reoako-search-results" class="reoako-search__results">
+
+    </div>
+</div>
